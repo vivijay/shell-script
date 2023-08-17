@@ -24,11 +24,11 @@ exit 1
 
 fi
 
-yum install mysql -y &>>LOGFILE
+yum install mysql -y &>>$LOGFILE
 
 validate $? "Sql installation"
 
-yum install postfix -y &>>LOGFILE
+yum install postfix -y &>>$LOGFILE
 
 validate $? "Postfix installation"
 
