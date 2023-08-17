@@ -8,10 +8,10 @@ LOGFILE=/tmp/$SCRIPTNAME-$DATE.log
 validate(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 is failure"
+        echo -e "\e[31m $2 is failure"
         exit 1
     else 
-        echo "$2 is Success"
+        echo -e "\e[31m $2 is Success"
     fi
 }
 
