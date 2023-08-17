@@ -21,7 +21,7 @@ exit 1
 
 fi
 
-yum install sql -y 
+yum install mysql -y 
 
 validate $? "Sql installation"
 
