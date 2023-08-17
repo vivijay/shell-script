@@ -4,14 +4,16 @@
 DATE=$(date +%F:%H:%M:%S)
 SCRIPTNAME=$0
 LOGFILE=/tmp/$SCRIPTNAME-$DATE.log
-
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 validate(){
     if [ $1 -ne 0 ]
     then
-        echo -e "\e[31m $2 is failure"
+        echo -e "R $2 is failure"
         exit 1
     else 
-        echo -e "\e[31m $2 is Success"
+        echo -e "G $2 is Success"
     fi
 }
 
