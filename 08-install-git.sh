@@ -8,3 +8,5 @@ then
 echo "Please run this script with root acces"
 
 fi
+
+yum install git -y
