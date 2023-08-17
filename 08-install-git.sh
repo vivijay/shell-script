@@ -10,7 +10,7 @@ exit 1
 
 fi
 
-yum install sqll -y 
+yum install sql -y 
 
 if [ $? -ne 0 ]
 then
