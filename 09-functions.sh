@@ -1,7 +1,9 @@
 #!/bin/bash
 
-USERID=$(id -u)
 
+DATE=$(Date +%F:%H:%M:%S)
+SCRIPTNAME=$0
+LOGFILE=/tmp/$SCRIPTNAME-$DATE.log
 
 validate(){
     if [ $1 -ne 0 ]
@@ -13,6 +15,7 @@ validate(){
     fi
 }
 
+USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
 
@@ -21,11 +24,11 @@ exit 1
 
 fi
 
-yum install mysql -y 
+yum install mysql -y &>>LOGFILE
 
 validate $? "Sql installation"
 
-yum install postfix -y
+yum install postfix -y &>>LOGFILE
 
 validate $? "Postfix installation"
 
