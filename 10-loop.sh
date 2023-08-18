@@ -6,7 +6,7 @@ N="\e[0m"
 G="\e[32m"
 DATE=$(date)
 SCRIPTNAME=$0
-LOGSDIR=/home/centos/shellscript-logs
+LOGSDIR=/home/centos/shell-script.logs
 LOGFILE=$LOGSDIR/$SCRIPTNAME-$DATE.log
 
 VALIDATE(){
