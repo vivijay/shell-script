@@ -15,7 +15,7 @@ VALIDATE(){
         echo -e "$R Error .. $2 Not installled "
     else
         echo -e " $G Sucess..$2 is Installed"
-
+    fi
 }
 
 if [ $USERID -ne 0 ]
