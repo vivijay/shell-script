@@ -18,7 +18,7 @@ do
     partition=$(echo $Line | awk '{print $1}')
     if [ $usage -gt $DISC_USAGE_THRESOLD ];
     then
-        MESSAGE+="High disc usage on $partition with $usage \n"
+        MESSAGE+="High disc usage on $partition with $usage \n "
     fi
 done <<< $DISC_USAGE
 
