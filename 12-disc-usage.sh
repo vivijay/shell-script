@@ -14,8 +14,8 @@ MESSAGE=
 ## IFS means internal field separator is space
 while IFS= read Line
 do
-    usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
-    partition=$(echo $line | awk '{print $1}')
+    usage=$(echo $Line | awk '{print $6}' | cut -d % -f1)
+    partition=$(echo $Line | awk '{print $1}')
     if [ $usage -gt $DISC_USAGE_THRESOL ];
     then
         MESSAGE+="High disc usage on $partition with $usage \n"
