@@ -16,7 +16,7 @@ while IFS= read Line
 do
     usage=$(echo $Line | awk '{print $6}' | cut -d % -f1)
     partition=$(echo $Line | awk '{print $1}')
-    if [ $usage -gt $DISC_USAGE_THRESOL ];
+    if [ $usage -gt $DISC_USAGE_THRESOLD ];
     then
         MESSAGE+="High disc usage on $partition with $usage \n"
     fi
