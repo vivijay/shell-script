@@ -22,4 +22,6 @@ do
     fi
 done <<< $DISC_USAGE
 
-echo "MESSAGE= $MESSAGE"
+echo -e "MESSAGE= $MESSAGE"
+
+echo "$MESSAGE" | mail -s "High Disc usage" vijayvinit3112@gmail.com
